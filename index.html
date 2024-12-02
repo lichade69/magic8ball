@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Richard Yang">
+    <title>Magic Eight Ball</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <h1>Magic Eight Ball</h1>
+    <script>
+        const responses = [
+            "It is certain",
+            "Without a doubt",
+            "As I see it, yes",
+            "Don't count on it",
+            "My reply is no",
+            "My sources say no",
+            "Reply hazy, try again",
+            "Ask again later"
+        ];
+
+        while (true) {
+            const question = prompt("Ask the Magic Eight Ball a yes or no question:");
+            if (question) {
+                const answer = responses[Math.floor(Math.random() * responses.length)];
+                alert(answer);
+            }
+            else {
+                alert("Thank you for playing! Farewell!");
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
